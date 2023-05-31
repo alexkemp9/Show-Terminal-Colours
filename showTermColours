@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# ~/.showTermColours
+# ~/.local/sbin/showTermColours
 #
 # Show the 256 range of colours possible within the terminal
 # Note that only the 1st col is 8-color `ls --colors` compat
