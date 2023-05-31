@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# ~/.showTermColours
+#
+# Show the 256 range of colours possible within the terminal
+# Note that only the 1st col is 8-color `ls --colors` compat
+#
+# colour info from ~/.dir_colors (itself from `dircolors -p`)
+# note: db name needs changing under Debian from 'dircolors'
+#       within  ~/.bashrc to 'dir_colors' if match std system
+#       names + needs creating
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+#
+# `source ~/.bashrc` to re-load .bashrc
+# 2018-03-06 started
+
+for x in 0 1 4 5 7 8; do
+  for i in {30..37}; do
+    for a in {40..47}; do
+	   echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m ";
+	 done;
+    echo;
+  done;
+done;
+# restore default colors
+# echo -ne '\e[?0c';
+tput sgr0;
