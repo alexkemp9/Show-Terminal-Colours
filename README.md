@@ -2,7 +2,7 @@
 BASH Script to Show the 246 Colours Possible Within a Terminal
 
 ## *Basics*
-This is a remarkably simple Bash script that will print to the Terminal all of the 246 colours that it is capable of showing (note: only the 1st col is 8-color `ls --colors` compatible). One value of this little utility is to select what colour you wish to deploy within `~/.dir_colors`, which is the file used to modify the display of certain filenames under ls. And thus the following will appear within ~/.bashrc:
+This is a remarkably simple Bash script that will print to the Terminal all of the 246 colours that it is capable of showing (note: only the 1st col is 8-color `ls --colors` compatible). One value of this little utility is to select what colour you wish to deploy within `~/.dir_colors`, which is the file used to modify the display of certain filenames under ls. And thus the following would appear within ~/.bashrc:
 
 ```bash
 # enable color support of ls and also add handy aliases
@@ -29,4 +29,7 @@ $ la ~/.local/sbin/add_chapters
 ```
 And here is what it will look like when run:
 
-![showTermColours]()
+![showTermColours](https://github.com/alexkemp9/Show-Terminal-Colours/blob/main/Screenshot_2023-05-31_12-28-02.png)
+
+PS    
+The 4th set of colours (beginning `\e[5;…) are *blinking* colours, and thus are not shown in the screenshot above. But please tell me that you are not the sort of person that would use *those* colours.
